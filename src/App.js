@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import Card from "./components/Card";
+import MainContent from "./components/MainContent";
+import ResponsiveImage from "./components/ResponsiveImage";
+import IllustrationDesktop from "./assets/images/illustration-sign-up-desktop.svg";
+import IllustrationMobile from "./assets/images/illustration-sign-up-mobile.svg";
+import Bold from "./assets/fonts/Roboto-Bold.ttf";
+import Regular from "./assets/fonts/Roboto-Regular.ttf";
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <Card>
+        <ResponsiveImage
+          mobileUrl={IllustrationMobile}
+          desktopUrl={IllustrationDesktop}
+        />
+      </Card>
+      <MainContent></MainContent>
     </div>
   );
 }
