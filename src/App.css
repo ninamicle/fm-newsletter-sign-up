@@ -11,7 +11,8 @@
 
 /* Colors */
 :root {
-  --clr-accent: hsl(4, 100%, 67%);
+  --clr-accent-500: hsl(4, 100%, 67%);
+  --clr-accent-400: hsl(5, 100%, 90%);
   --clr-primary-500: hsl(234, 29%, 20%);
   --clr-primary-400: hsl(235, 18%, 26%);
   --clr-neutral-300: hsl(231, 7%, 60%);

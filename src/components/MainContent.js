@@ -1,5 +1,3 @@
-import Card from "./Card";
-import Form from "./Form";
 import IconList from "..//assets/images/icon-list.svg";
 import styles from "./MainContent.module.css";
 
@@ -9,24 +7,22 @@ const MainContent = () => {
     "Measuring to ensure updates are a success",
     "And much more!",
   ];
+
   return (
-    <Card>
-      <div className={styles.content}>
-        <h1 className={styles.title}>Stay updated!</h1>
-        <p className={`${styles.paragraph} ${styles.description}`}>
-          Join 60,000+ product managers receiving monthly updates on:
-        </p>
-        <ul className={styles.list}>
-          {list.map((item) => (
-            <li className={styles["list-item"]} key={Math.random()}>
-              <img src={IconList} alt="Chevron up icon" />
-              <p>{item}</p>
-            </li>
-          ))}
-        </ul>
-        <Form />
-      </div>
-    </Card>
+    <div className={styles.content}>
+      <h1 className={styles.title}>Stay updated!</h1>
+      <p className={`${styles.paragraph} ${styles.description}`}>
+        Join 60,000+ product managers receiving monthly updates on:
+      </p>
+      <ul className={styles.list}>
+        {list.map((item) => (
+          <li className={styles["list-item"]} key={Math.random()}>
+            <img src={IconList} alt="Chevron up icon" />
+            <p>{item}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 };
 
