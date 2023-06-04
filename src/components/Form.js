@@ -1,5 +1,6 @@
 import { useEffect, useReducer } from "react";
 import styles from "./Form.module.css";
+import Button from "./Button";
 
 let initialState = { email: "", validEmail: true };
 const emailReducer = (state, action) => {
@@ -42,10 +43,12 @@ const Form = (props) => {
   return (
     <form className={styles.form} onSubmit={handleSuccessMessage}>
       <div className={styles["form-control"]}>
-        <label htmlFor="email">
-          Email address
-          {state.validEmail ? null : <span>Valid email required</span>}
-        </label>
+        <div className={styles.label}>
+          <label htmlFor="email">Email address</label>
+          {state.validEmail ? null : (
+            <span className={styles["invalid-msg"]}>Valid email required</span>
+          )}
+        </div>
         <input
           type="email"
           id="email"
@@ -55,7 +58,7 @@ const Form = (props) => {
           className={state.validEmail ? "" : styles.invalid}
         />
       </div>
-      <button type="submit">Subscribe to monthly newsletter</button>
+      <Button type="submit" text="Subscribe to monthly newsletter" />
     </form>
   );
 };

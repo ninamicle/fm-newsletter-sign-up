@@ -18,22 +18,18 @@ function App() {
   return (
     <div>
       {!email ? (
-        <div>
-          <Card bg={"card-bg"} container={"container"}>
-            <div className="image">
-              <ResponsiveImage
-                mobileUrl={IllustrationMobile}
-                desktopUrl={IllustrationDesktop}
-              />
-            </div>
-          </Card>
-          <Card>
-            <div className="text">
-              <MainContent></MainContent>
-              <Form onSubmit={handletEmail} />
-            </div>
-          </Card>
-        </div>
+        <Card bg={"card-bg"} container={"container"}>
+          <div className="image">
+            <ResponsiveImage
+              mobileUrl={IllustrationMobile}
+              desktopUrl={IllustrationDesktop}
+            />
+          </div>
+          <div className="text">
+            <MainContent></MainContent>
+            <Form onSubmit={handletEmail} />
+          </div>
+        </Card>
       ) : (
         <SuccessMessage email={email} />
       )}

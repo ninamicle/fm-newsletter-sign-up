@@ -13,13 +13,18 @@
 }
 
 label {
-  font-size: 14px;
-  font-weight: var(--fw-bold);
   color: var(--clr-primary-500);
 }
 
-label span.invalid {
-  margin-left: 2rem;
+.label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: var(--fw-bold);
+}
+
+.invalid-msg {
+  color: var(--clr-accent-500);
 }
 
 input,
@@ -28,19 +33,9 @@ button {
   padding: 1rem;
 }
 input {
-  border: 1px solid var(--clr-neutral-300);
+  border: 1px solid hsl(231, 7%, 75%);
 }
 .invalid {
   border: 1px solid var(--clr-accent-500);
   background-color: var(--clr-accent-400);
-}
-input:focus {
-  outline: none;
-}
-
-button {
-  border: none;
-  background-color: var(--clr-primary-500);
-  color: var(--clr-neutral-100);
-  font-weight: var(--fw-bold);
 }

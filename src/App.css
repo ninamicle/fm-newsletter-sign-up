@@ -86,22 +86,28 @@ body {
   margin: 0 auto;
   /*media query for desktop */
   @media screen and (min-width: 600px) {
-    width: 65vw;
-    height: 72vh;
+    width: 100%;
+    height: auto;
     border-radius: 18px;
     padding: 1rem;
     overflow: hidden;
     display: flex;
-    /* flex-wrap: wrap; */
     justify-content: space-between;
   }
 }
 
 .image {
   order: 1;
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 650px) {
     order: 2;
   }
+}
+
+.text {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .card-bg {
