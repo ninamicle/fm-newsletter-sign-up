@@ -76,24 +76,8 @@ svg {
 body {
   font-size: 16px;
   background-color: var(--clr-primary-400);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.container {
-  width: 100%;
-  margin: 0 auto;
-  /*media query for desktop */
-  @media screen and (min-width: 600px) {
-    width: 100%;
-    height: auto;
-    border-radius: 18px;
-    padding: 1rem;
-    overflow: hidden;
-    display: flex;
-    justify-content: space-between;
-  }
+  display: grid;
+  place-content: center;
 }
 
 .image {
@@ -111,5 +95,4 @@ body {
 }
 
 .card-bg {
-  background-color: var(--clr-neutral-100);
 }

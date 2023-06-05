@@ -9,7 +9,7 @@ const MainContent = () => {
   ];
 
   return (
-    <div className={styles.content}>
+    <div>
       <h1 className={styles.title}>Stay updated!</h1>
       <p className={`${styles.paragraph} ${styles.description}`}>
         Join 60,000+ product managers receiving monthly updates on:

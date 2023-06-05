@@ -3,6 +3,7 @@
   background-color: var(--clr-primary-500);
   color: var(--clr-neutral-100);
   font-weight: var(--fw-bold);
+  width: inherit;
 }
 
 .btn:hover {
@@ -12,5 +13,8 @@
     rgba(255, 83, 119, 1) 0%,
     rgba(255, 102, 66, 1) 71%
   );
+  box-shadow: -1px 10px 21px 0px rgba(255, 102, 66, 0.41);
+  -webkit-box-shadow: -1px 10px 21px 0px rgba(255, 102, 66, 0.41);
+  -moz-box-shadow: -1px 10px 21px 0px rgba(255, 102, 66, 0.41);
   cursor: pointer;
 }

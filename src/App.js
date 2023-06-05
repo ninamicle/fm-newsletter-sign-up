@@ -1,12 +1,14 @@
 import Card from "./components/Card";
 import Form from "./components/Form";
 import SuccessMessage from "./components/SuccessMessage";
-import { useState } from "react";
+import { Fragment, useState } from "react";
 
 import MainContent from "./components/MainContent";
 import ResponsiveImage from "./components/ResponsiveImage";
 import IllustrationDesktop from "./assets/images/illustration-sign-up-desktop.svg";
 import IllustrationMobile from "./assets/images/illustration-sign-up-mobile.svg";
+import iconList from "./assets/images/icon-success.svg";
+
 import "./App.css";
 
 function App() {
@@ -16,9 +18,9 @@ function App() {
     setEmail(email.email);
   };
   return (
-    <div>
+    <Fragment>
       {!email ? (
-        <Card bg={"card-bg"} container={"container"}>
+        <Card>
           <div className="image">
             <ResponsiveImage
               mobileUrl={IllustrationMobile}
@@ -31,9 +33,11 @@ function App() {
           </div>
         </Card>
       ) : (
-        <SuccessMessage email={email} />
+        <Card>
+          <SuccessMessage email={email} icon={iconList} />
+        </Card>
       )}
-    </div>
+    </Fragment>
   );
 }
 
